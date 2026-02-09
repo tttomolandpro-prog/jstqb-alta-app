@@ -2,6 +2,21 @@ import streamlit as st
 import json
 import os
 
+st.set_page_config(
+    page_title="ALTA 100問",
+    layout="centered", # スマホで中央に収まるようにする
+)
+
+# スマホでボタンを押しやすくするためのカスタムCSS
+st.markdown("""
+    <style>
+    div.stButton > button {
+        width: 100%;
+        height: 3em;
+        margin-bottom: 10px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 # ファイルの読み込み
 def load_data():
     if os.path.exists('questions.json'):
@@ -54,4 +69,5 @@ else:
                 st.rerun()
             else:
                 st.balloons()
+
                 st.write("🎉 全問題を解き終えました！")
