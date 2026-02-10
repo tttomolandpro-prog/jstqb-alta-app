@@ -29,6 +29,7 @@ st.markdown("""
         margin-bottom: 20px;
         border-left: 5px solid #3498db;
         line-height: 1.6;
+        color: #333333;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -157,3 +158,4 @@ else:
     if st.button("🏠 最初からやり直す（全40問）"):
         start_balanced_quiz()
         st.rerun()
+
